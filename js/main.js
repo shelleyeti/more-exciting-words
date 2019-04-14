@@ -19,3 +19,22 @@ function addExcitement (theWordArray) {
 }
 
 addExcitement(sentence)
+
+
+function addExcitement2 (theWordArray, punct, num) {
+    // Each time the for loop executes, you're going to add one more word to this string
+    let buildMeUp = ""
+for (let i = 0; i < theWordArray.length; i++) {
+    if ((i + 1) % 3 === 0){
+        buildMeUp += ` ${theWordArray[i]} ${punct.repeat(num)} `;
+    }
+    else {
+        buildMeUp += ` ${theWordArray[i]}`;
+    }
+    console.log(buildMeUp);
+}
+}
+
+// Invoke the function and pass in the array
+addExcitement2(sentence, '?', 3);
+
